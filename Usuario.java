@@ -1,13 +1,13 @@
 public class Usuario {
-  String Nome;
-  String CPF;
-  String Email;
-public Usuario (String Nome, String CPF, String Email)
-  { this.Nome = Nome;
-    this.CPF = CPF;
-    this.Email = Email;
+  String nome;
+  String cpf;
+  String email;
+public Usuario (String nome, String cpf, String email)
+  { this.nome = Nome;
+    this.cpf = cpf;
+    this.email = email;
   }
   public String toString() {
-    return Nome +"-"+ CPF +"-"+ Email;
+    return nome +"-"+ cpf +"-"+ email;
   }
   }
