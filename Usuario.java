@@ -3,7 +3,7 @@ public class Usuario {
   String cpf;
   String email;
 public Usuario (String nome, String cpf, String email)
-  { this.nome = Nome;
+  { this.nome = nome;
     this.cpf = cpf;
     this.email = email;
   }
