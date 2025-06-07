@@ -1,18 +1,21 @@
+package model;
+
 public class ItemVenda {
-  Produto produto;
-  int quantidade;
+    private Produto produto;
+    private int quantidade;
 
-  public ItemVenda(Produto produto, int quantidade) {
-    this.produto = produto;
-    this.quantidade = quantidade;
-    produto.vender(quantidade);
-  }
+    public ItemVenda(Produto produto, int quantidade) {
+        this.produto = produto;
+        this.quantidade = quantidade;
+        produto.vender(quantidade);
+    }
 
-  public double getTotal() {
-    return produto.preco * quantidade;
-  }
+    public double getTotal() {
+        return produto.getPreco() * quantidade;
+    }
 
-  public String toString() {
-    return produto.nome + " x" + quantidade + " = R$" + getTotal();
-  }
+    @Override
+    public String toString() {
+        return produto.getNome() + " x" + quantidade + " = R$" + getTotal();
+    }
 }

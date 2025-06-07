@@ -1,19 +1,30 @@
-# Teste Estágio Backend - Loja Simples em Java
+# Teste Estágio Backend - Daniela Sousa
 
-Este projeto foi desenvolvido como parte de um processo seletivo para vaga de estágio backend. Ele simula uma loja online com cadastro de produtos, usuários, vendas e itens de venda utilizando conceitos básicos de orientação a objetos em Java.
+## Sobre o Projeto
+Este é um projeto de simulação de vendas em uma loja online, desenvolvido em Java puro.
 
-## 🛠 Tecnologias utilizadas
+## Funcionalidades
+- Cadastro e representação de usuários
+- Simulação de catálogo de produtos
+- Registro de vendas e cálculo de total
+- Atualização de estoque após cada venda
+- Simulação de consumo de API ViaCEP
 
-- Java (sem frameworks)
-- Git e GitHub para versionamento
+## Execução
+Para executar:
 
-## 📌 Funcionalidades
+1. Compile os arquivos Java na pasta `src`:
+   ```bash
+   javac src/**/*.java
+   ```
 
-- Cadastro simulado de usuários e produtos
-- Simulação de uma compra (venda)
-- Relacionamento entre classes: Usuario, Produto, Venda e ItemVenda
-- Atualização do estoque após cada venda
-- Exibição do resumo da venda e do estoque atualizado
+2. Execute a classe `Main`:
+   ```bash
+   java src/service/Main
+   ```
 
+## Simulação de API
+A classe `ViaCepService` simula a busca de endereço por CEP (sem necessidade de conexão externa).
 
-
+---
+Daniela Sousa

@@ -1,31 +1,31 @@
+package model;
+
 import java.util.ArrayList;
+import java.util.List;
 
 public class Venda {
-  Usuario usuario;
-  ArrayList<ItemVenda> itens = new ArrayList<>();
+    private Usuario usuario;
+    private List<ItemVenda> itens = new ArrayList<>();
 
-  public Venda(Usuario usuario) {
-    this.usuario = usuario;
-  }
-
-  public void adicionarItem(Produto produto, int qtd) {
-    itens.add(new ItemVenda(produto, qtd));
-  }
-
-  public double getTotal() {
-    double total = 0;
-    for (ItemVenda item : itens) {
-      total += item.getTotal();
+    public Venda(Usuario usuario) {
+        this.usuario = usuario;
     }
-    return total;
-  }
 
-  public String toString() {
-    String texto = "Venda para " + usuario.nome + "\n";
-    for (ItemVenda item : itens) {
-      texto += " - " + item + "\n";
+    public void adicionarItem(Produto produto, int qtd) {
+        itens.add(new ItemVenda(produto, qtd));
     }
-    texto += "Total: R$" + getTotal();
-    return texto;
-  }
+
+    public double getTotal() {
+        return itens.stream().mapToDouble(ItemVenda::getTotal).sum();
+    }
+
+    @Override
+    public String toString() {
+        StringBuilder texto = new StringBuilder("Venda para " + usuario.getNome() + "\n");
+        for (ItemVenda item : itens) {
+            texto.append(" - ").append(item).append("\n");
+        }
+        texto.append("Total: R$").append(getTotal());
+        return texto.toString();
+    }
 }
